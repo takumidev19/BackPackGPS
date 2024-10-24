@@ -33,6 +33,7 @@
         android:hint="@string/nombre_de_usuario"
         android:textColorHint="@color/white"
         app:hintTextColor="@color/white"
+        android:background="@color/subtle_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTitulo">
@@ -40,7 +41,6 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded"
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -56,6 +56,7 @@
         app:hintTextColor="@color/white"
         app:endIconMode="password_toggle"
         app:endIconTint="@color/white"
+        android:background="@color/subtle_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tiNombreUsuario">
@@ -63,7 +64,6 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded"
             android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -80,6 +80,7 @@
         app:hintTextColor="@color/white"
         app:endIconMode="password_toggle"
         app:endIconTint="@color/white"
+        android:background="@color/subtle_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tiPassword">
@@ -87,25 +88,26 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded"
             android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnIniciarSesion"
+        android:id="@+id/btnCrearCuenta"
+        style="@style/Widget.Material3.Button.OutlinedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:background="@drawable/rounded"
+        android:textColor="@color/white"
         android:textSize="16sp"
         android:text="@string/crear_cuenta"
+        android:backgroundTint="@color/subtle_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tiPasswordConfirm" />
 
     <TextView
-        android:id="@+id/olvidastePassText"
+        android:id="@+id/TvTienesCuenta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -113,7 +115,7 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnIniciarSesion" />
+        app:layout_constraintTop_toBottomOf="@+id/btnCrearCuenta" />
 
     <TextView
         android:id="@+id/iniciarConText"
@@ -124,7 +126,7 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/olvidastePassText" />
+        app:layout_constraintTop_toBottomOf="@+id/TvTienesCuenta" />
 
     <LinearLayout
         android:id="@+id/socialLoginButtons"

@@ -32,6 +32,7 @@
         android:hint="@string/nombre_de_usuario"
         android:textColorHint="@color/white"
         app:hintTextColor="@color/white"
+        android:background="@color/subtle_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTitulo">
@@ -39,7 +40,6 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded"
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -55,6 +55,7 @@
         app:hintTextColor="@color/white"
         app:endIconMode="password_toggle"
         app:endIconTint="@color/white"
+        android:background="@color/subtle_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tiNombreUsuario">
@@ -62,18 +63,19 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded"
             android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnIniciarSesion"
+        style="@style/Widget.Material3.Button.OutlinedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded"
+        android:backgroundTint="@color/subtle_dark"
         android:layout_marginTop="20dp"
         android:textSize="16sp"
+        android:textColor="@color/white"
         android:text="@string/iniciar_sesi_n"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -94,7 +96,7 @@
         android:id="@+id/Tvregistrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:text="@string/no_tienes_una_cuenta_registrate"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"

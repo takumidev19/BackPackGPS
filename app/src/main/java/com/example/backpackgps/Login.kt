@@ -1,6 +1,8 @@
 package com.example.backpackgps
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -17,6 +19,15 @@ class Login : AppCompatActivity() {
             insets
         }
 
-        val cambiarPantalla : TextView = findViewById(R.id.Tvregistrar)
+        val cambiarPantalla : TextView = findViewById(R.id.olvidastePassText)
+        cambiarPantalla.setOnClickListener {
+            val intent = Intent(this, ForgetPassword::class.java)
+            startActivity(intent)
+        }
+        val cambiarPantalla2 : TextView = findViewById(R.id.Tvregistrar)
+        cambiarPantalla2.setOnClickListener {
+            val intent = Intent(this, Register::class.java)
+            startActivity(intent)
+        }
     }
 }
