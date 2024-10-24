@@ -9,4 +9,9 @@
     <string name="iniciar_con">Iniciar con</string>
     <string name="iniciar_sesi_n_con_facebook">Iniciar sesión con Facebook</string>
     <string name="iniciar_sesion_con_twitter">iniciar sesion con twitter</string>
+    <string name="crear_cuenta">Crear Cuenta</string>
+    <string name="confirmar_contrase_a">Confirmar contraseña</string>
+    <string name="ya_tienes_una_cuenta_inicia_sesi_n">Ya tienes una cuenta? Inicia sesión</string>
+    <string name="registrar_con">Registrar con</string>
+    <string name="no_tienes_una_cuenta_registrate">No tienes una cuenta? Registrate</string>
 </resources>
