@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@drawable/background"
     tools:context=".Login">
 
     <TextView
@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:text="@string/iniciar_sesion"
         android:textSize="32sp"
+        android:textColor="@color/white"
         android:textStyle="bold"
         android:layout_marginTop="60dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,6 +30,8 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="16dp"
         android:hint="@string/nombre_de_usuario"
+        android:textColorHint="@color/white"
+        app:hintTextColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTitulo">
@@ -36,6 +39,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded"
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -47,7 +51,10 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         android:hint="@string/contrase_a"
+        android:textColorHint="@color/white"
+        app:hintTextColor="@color/white"
         app:endIconMode="password_toggle"
+        app:endIconTint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tiNombreUsuario">
@@ -55,6 +62,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded"
             android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -63,6 +71,7 @@
         android:id="@+id/btnIniciarSesion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/rounded"
         android:layout_marginTop="20dp"
         android:textSize="16sp"
         android:text="@string/iniciar_sesi_n"
@@ -76,7 +85,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="@string/olvidaste_tu_contrase_a"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnIniciarSesion" />
@@ -87,7 +96,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/no_tienes_una_cuenta_registrate"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,7 +108,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:text="@string/iniciar_con"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -111,6 +120,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:orientation="horizontal"
+        android:background="@drawable/rounded"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/iniciarConText">
@@ -121,10 +131,9 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@android:color/transparent"
             android:contentDescription="@string/iniciar_sesi_n_con_facebook"
-            android:text=""
             app:icon="@drawable/ic_facebook"
             app:iconGravity="textStart"
-            app:iconTint="@color/blue" />
+            app:iconTint="@color/white" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/twitterLoginButton"
@@ -136,7 +145,7 @@
             android:text=""
             app:icon="@drawable/ic_twitter"
             app:iconGravity="textStart"
-            app:iconTint="@color/blue" />
+            app:iconTint="@color/white" />
 
     </LinearLayout>
 
