@@ -18,4 +18,6 @@
     <string name="contrase_a_actual">Contraseña actual</string>
     <string name="nueva_contrase_a">Nueva contraseña</string>
     <string name="cambiar_contrase_a">Cambiar contraseña</string>
+    <string name="recuperar_contrase_a">Recuperar Contraseña</string>
+    <string name="Descripcion_recuperarcontrasena">Para recuperar tu contraseña ingresa tu nombre de usuario</string>
 </resources>
