@@ -14,4 +14,8 @@
     <string name="ya_tienes_una_cuenta_inicia_sesi_n">Ya tienes una cuenta? Inicia sesión</string>
     <string name="registrar_con">Registrar con</string>
     <string name="no_tienes_una_cuenta_registrate">No tienes una cuenta? Registrate</string>
+    <string name="reinciar_contrase_a">Reinciar Contraseña</string>
+    <string name="contrase_a_actual">Contraseña actual</string>
+    <string name="nueva_contrase_a">Nueva contraseña</string>
+    <string name="cambiar_contrase_a">Cambiar contraseña</string>
 </resources>
