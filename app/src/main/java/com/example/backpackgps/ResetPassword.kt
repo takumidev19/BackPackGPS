@@ -2,11 +2,13 @@ package com.example.backpackgps
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.textfield.TextInputEditText
 
 class ResetPassword : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,10 +21,42 @@ class ResetPassword : AppCompatActivity() {
             insets
         }
 
-        val cambiarPantalla : MaterialButton = findViewById(R.id.btnReiniciar)
+        // Captura el nombre de usuario desde el Intent
+        val nombreUsuario = intent.getStringExtra("nombre_usuario") ?: ""
+
+        val etNuevaContrasena: TextInputEditText = findViewById(R.id.etContrasenaNueva)
+        val etConfirmarContrasena: TextInputEditText = findViewById(R.id.etConfirmarContrasena)
+        val cambiarPantalla: MaterialButton = findViewById(R.id.btnReiniciar)
+
         cambiarPantalla.setOnClickListener {
-            val intent = Intent(this, Login::class.java)
-            startActivity(intent)
+            val nuevaContrasena = etNuevaContrasena.text.toString()
+            val confirmarContrasena = etConfirmarContrasena.text.toString()
+
+            if (nuevaContrasena.isNotEmpty() && confirmarContrasena.isNotEmpty()) {
+                if (nuevaContrasena == confirmarContrasena) {
+                    // Aquí actualizas la contraseña en SharedPreferences
+                    val sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
+                    val editor = sharedPreferences.edit()
+                    editor.putString(nombreUsuario, nuevaContrasena) // Actualiza la contraseña del usuario
+                    editor.apply()
+
+                    // Notificar al usuario y redirigir al login
+                    Toast.makeText(this, "Contraseña cambiada exitosamente", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this, Login::class.java))
+                    finish()
+                } else {
+                    // Mostrar un mensaje de error si las contraseñas no coinciden
+                    etConfirmarContrasena.error = "Las contraseñas no coinciden."
+                }
+            } else {
+                // Mostrar mensajes de error si los campos están vacíos
+                if (nuevaContrasena.isEmpty()) {
+                    etNuevaContrasena.error = "Por favor, introduce una nueva contraseña."
+                }
+                if (confirmarContrasena.isEmpty()) {
+                    etConfirmarContrasena.error = "Por favor, confirma la nueva contraseña."
+                }
+            }
         }
     }
 }
