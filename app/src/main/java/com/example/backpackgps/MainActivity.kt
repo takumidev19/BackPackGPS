@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import com.example.backpackgps.fragments.HomeFragment
+import com.example.backpackgps.fragments.MapPruebasFragment
+import com.example.backpackgps.fragments.SettingsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {

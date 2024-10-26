@@ -30,4 +30,5 @@
     <string name="device_address">Device Address</string>
     <string name="editar">Editar</string>
     <string name="eliminar">Eliminar</string>
+    <string name="dispositivos">Dispositivos</string>
 </resources>
