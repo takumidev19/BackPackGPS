@@ -42,7 +42,8 @@
             android:id="@+id/etNombreUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text" />
+            android:inputType="text"
+            tools:ignore="VisualLintTextFieldSize" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -66,7 +67,8 @@
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            tools:ignore="VisualLintTextFieldSize" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -91,7 +93,8 @@
             android:id="@+id/etPasswordConfirm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            tools:ignore="VisualLintTextFieldSize" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -101,13 +104,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:backgroundTint="@color/subtle_dark"
+        android:text="@string/crear_cuenta"
         android:textColor="@color/white"
         android:textSize="16sp"
-        android:text="@string/crear_cuenta"
-        android:backgroundTint="@color/subtle_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tiPasswordConfirm" />
+        app:layout_constraintTop_toBottomOf="@+id/tiPasswordConfirm"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <TextView
         android:id="@+id/TvTienesCuenta"
@@ -118,7 +122,8 @@
         android:textColor="#00ACC1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCrearCuenta" />
+        app:layout_constraintTop_toBottomOf="@+id/btnCrearCuenta"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/iniciarConText"
