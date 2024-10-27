@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/gradient"
     tools:context=".Login">
 
     <TextView
@@ -41,7 +41,9 @@
             android:id="@+id/etNombreUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text" />
+            android:textColor="@color/white"
+            android:inputType="text"
+            tools:ignore="VisualLintTextFieldSize" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -65,7 +67,8 @@
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            tools:ignore="VisualLintTextFieldSize" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -74,14 +77,15 @@
         style="@style/Widget.Material3.Button.OutlinedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/subtle_dark"
         android:layout_marginTop="20dp"
-        android:textSize="16sp"
-        android:textColor="@color/white"
+        android:backgroundTint="@color/subtle_dark"
         android:text="@string/iniciar_sesi_n"
+        android:textColor="@color/white"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/tilPassword"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <TextView
         android:id="@+id/olvidastePassText"
@@ -89,10 +93,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="@string/olvidaste_tu_contrase_a"
-        android:textColor="@color/white"
+        android:textColor="#00ACC1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnIniciarSesion" />
+        app:layout_constraintTop_toBottomOf="@+id/btnIniciarSesion"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/Tvregistrar"
@@ -100,11 +105,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/no_tienes_una_cuenta_registrate"
-        android:textColor="@color/white"
+        android:textColor="#00ACC1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/olvidastePassText" />
+        app:layout_constraintTop_toBottomOf="@+id/olvidastePassText"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/iniciarConText"
