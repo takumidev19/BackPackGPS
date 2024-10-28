@@ -16,14 +16,14 @@
             android:id="@+id/textViewNombreDispositivo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nombre del dispositivo"
+            android:text="@string/card_nombre_del_dispositivo"
             android:textSize="18sp"/>
 
         <TextView
             android:id="@+id/textViewDetallesDispositivo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Detalles del dispositivo"
+            android:text="@string/card_detalles_del_dispositivo"
             android:textSize="14sp"/>
 
         <LinearLayout
@@ -37,13 +37,13 @@
                 android:id="@+id/btnEditar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Editar"/>
+                android:text="@string/btneditar"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnEliminar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Eliminar"
+                android:text="@string/btneliminar"
                 android:layout_marginStart="8dp"/>
         </LinearLayout>
     </LinearLayout>

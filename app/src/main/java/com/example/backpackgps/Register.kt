@@ -20,7 +20,6 @@ class Register : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_register)
 
-        // Inicializa SharedPreferences
         sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -64,7 +63,7 @@ class Register : AppCompatActivity() {
             }
 
             val editor = sharedPreferences.edit()
-            editor.putString(username, password) // Usa el nombre de usuario como clave
+            editor.putString(username, password)
             editor.apply()
 
             Toast.makeText(this, "Cuenta creada exitosamente", Toast.LENGTH_SHORT).show()

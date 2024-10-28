@@ -31,4 +31,10 @@
     <string name="editar">Editar</string>
     <string name="eliminar">Eliminar</string>
     <string name="dispositivos">Dispositivos</string>
+    <string name="nombre_del_dispositivo">Nombre del dispositivo</string>
+    <string name="detalles_del_dispositivo">Detalles del dispositivo</string>
+    <string name="btneliminar">Eliminar</string>
+    <string name="btneditar">Editar</string>
+    <string name="card_detalles_del_dispositivo">Detalles del dispositivo</string>
+    <string name="card_nombre_del_dispositivo">Nombre del dispositivo</string>
 </resources>

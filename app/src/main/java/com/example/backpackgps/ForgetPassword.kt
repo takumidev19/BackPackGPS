@@ -15,6 +15,7 @@ class ForgetPassword : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_forget_password)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -22,28 +23,29 @@ class ForgetPassword : AppCompatActivity() {
         }
 
         val cambiarPantalla: MaterialButton = findViewById(R.id.btnRecuperar)
-        val etNombreUsuario: TextInputEditText = findViewById(R.id.etNombreUsuario) // Cambia el ID aquí
+        val etNombreUsuario: TextInputEditText = findViewById(R.id.etNombreUsuario)
 
         cambiarPantalla.setOnClickListener {
-            val nombreUsuario = etNombreUsuario.text.toString().trim()
-            if (nombreUsuario.isNotEmpty()) {
-                // Aquí compruebas si el usuario existe
-                val sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
-                val storedPassword = sharedPreferences.getString(nombreUsuario, null)
+            try {
+                val nombreUsuario = etNombreUsuario.text.toString().trim()
 
-                if (storedPassword != null) {
-                    // Si el nombre de usuario existe, pasar a la pantalla de resetear contraseña
-                    val intent = Intent(this, ResetPassword::class.java).apply {
-                        putExtra("nombre_usuario", nombreUsuario) // Pasa el nombre de usuario a la nueva actividad
+                if (nombreUsuario.isNotEmpty()) {
+                    val sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
+                    val storedPassword = sharedPreferences.getString(nombreUsuario, null)
+
+                    if (storedPassword != null) {
+                        val intent = Intent(this, ResetPassword::class.java).apply {
+                            putExtra("nombre_usuario", nombreUsuario)
+                        }
+                        startActivity(intent)
+                    } else {
+                        Toast.makeText(this, "El nombre de usuario no existe", Toast.LENGTH_SHORT).show()
                     }
-                    startActivity(intent)
                 } else {
-                    // Mostrar mensaje de error si el nombre de usuario no existe
-                    Toast.makeText(this, "El nombre de usuario no existe", Toast.LENGTH_SHORT).show()
+                    etNombreUsuario.error = "Por favor, introduce tu nombre de usuario."
                 }
-            } else {
-                // Mostrar un mensaje de error si el nombre de usuario está vacío
-                etNombreUsuario.error = "Por favor, introduce tu nombre de usuario."
+            } catch (e: Exception) {
+                Toast.makeText(this, "Ocurrió un error al intentar recuperar la cuenta", Toast.LENGTH_SHORT).show()
             }
         }
     }

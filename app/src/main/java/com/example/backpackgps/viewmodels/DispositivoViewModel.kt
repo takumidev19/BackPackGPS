@@ -11,12 +11,12 @@ class DispositivoViewModel : ViewModel() {
 
     fun addDispositivo(dispositivo: Dispositivo) {
         _dispositivos.value?.add(dispositivo)
-        _dispositivos.value = _dispositivos.value // Notifica cambios
+        _dispositivos.value = _dispositivos.value
     }
 
     fun removeDispositivo(dispositivo: Dispositivo) {
         _dispositivos.value?.remove(dispositivo)
-        _dispositivos.value = _dispositivos.value // Notifica cambios
+        _dispositivos.value = _dispositivos.value
     }
 }
 

@@ -32,7 +32,6 @@ class Login : AppCompatActivity() {
         passwordEditText = findViewById(R.id.etPassword)
         val loginButton: Button = findViewById(R.id.btnIniciarSesion)
 
-        // Manejar el inicio de sesión
         loginButton.setOnClickListener {
             loginUser()
         }
@@ -63,7 +62,6 @@ class Login : AppCompatActivity() {
 
             if (storedPassword != null && storedPassword == password) {
                 Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
-                // Redirigir a la siguiente actividad
                 startActivity(Intent(this, MainActivity::class.java))
                 finish()
             } else {

@@ -15,7 +15,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Initialize bottomNavigationView
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -24,12 +23,10 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        // Fragment instances
         val homeFragment = HomeFragment()
         val mapPruebasFragment = MapPruebasFragment()
         val settingsFragment = SettingsFragment()
 
-        // Set navigation listener using the new method
         bottomNavigationView.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.navigation_home -> {

@@ -7,7 +7,7 @@ import com.example.backpackgps.databinding.CardItemBinding
 import com.example.backpackgps.models.Dispositivo
 
 class DispositivoAdapter(
-    private var dispositivos: MutableList<Dispositivo>, // Haz que esta lista sea mutable
+    private var dispositivos: MutableList<Dispositivo>,
     private val listener: OnItemClickListener
 ) : RecyclerView.Adapter<DispositivoAdapter.ViewHolder>() {
 
@@ -44,15 +44,13 @@ class DispositivoAdapter(
 
     override fun getItemCount() = dispositivos.size
 
-    // Método para actualizar la lista de dispositivos
     fun updateDispositivos(newDispositivos: List<Dispositivo>) {
         val oldSize = dispositivos.size
-        dispositivos.clear() // Limpia la lista actual
-        dispositivos.addAll(newDispositivos) // Agrega todos los nuevos dispositivos
+        dispositivos.clear()
+        dispositivos.addAll(newDispositivos)
 
-        // Notifica los cambios específicos
-        notifyItemRangeRemoved(0, oldSize) // Notifica que se han eliminado ítems
-        notifyItemRangeInserted(0, newDispositivos.size) // Notifica que se han insertado nuevos ítems
+        notifyItemRangeRemoved(0, oldSize)
+        notifyItemRangeInserted(0, newDispositivos.size)
     }
 }
 
